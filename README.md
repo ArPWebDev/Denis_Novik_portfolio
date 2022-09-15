@@ -2,7 +2,7 @@
 Это учебный проект, для совершенствования навыков работы с HTML и CSS.
 
 ## Ссылка на проект 
-c
+https://arpwebdev.github.io/Denis_Novik_portfolio/
 
 ## В работе использовались:
 HTML, CSS 
