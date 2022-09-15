@@ -122,9 +122,8 @@ h2{
 	width: 100%;
 	max-width: 750px;
 	position: absolute;
-	left: 50%;
-	top: 24%;
-	transform: translate(-50%, -50%);
+	top: 0;
+	left: 0;
 	background-color: #FFFFFF;
 }
 .nav-popup-inactive{
@@ -279,6 +278,7 @@ h2{
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	transition: 2s;
 }
 .skills-card__icon-wrapper:hover{
 	scale: 1.2;

@@ -12,11 +12,11 @@
 	<header class="header" id="hd">
 		<nav class="nav-header">
 			<ul class="nav-list">
-				<li><a href="#hd" class="nav-list__link selected lang-key__nav-link_home">Home</a></li>		
-				<li><a href="#ab" class="nav-list__link lang-key__nav-link_about-me">About me</a></li>		
-				<li><a href="#sk" class="nav-list__link lang-key__nav-link_skills">Skills</a></li>		
-				<li><a href="#pr" class="nav-list__link lang-key__nav-link_portfolio">Portfolio</a></li>		
-				<li><a href="#cn" class="nav-list__link lang-key__nav-link_contacts">Contacts</a></li>		
+				<li><a href="#hd" class="nav-list__link selected lang-key__nav-link_home nav-link-js">Home</a></li>		
+				<li><a href="#ab" class="nav-list__link lang-key__nav-link_about-me nav-link-js">About me</a></li>		
+				<li><a href="#sk" class="nav-list__link lang-key__nav-link_skills nav-link-js">Skills</a></li>		
+				<li><a href="#pr" class="nav-list__link lang-key__nav-link_portfolio nav-link-js">Portfolio</a></li>		
+				<li><a href="#cn" class="nav-list__link lang-key__nav-link_contacts nav-link-js">Contacts</a></li>		
 			</ul>
 		</nav>
 		<div class="header-about">
@@ -24,18 +24,18 @@
 				<h1 class="h1 lang-key__h1">Denis<br>Novik</h1>
 				<div class="header-about-text__item lang-key__header-about">UX | UI designer<br> 24 years old, Minsk</div>
 				<div class="header-about-lang">
-					<div class="header-about-lang__ru">RU</div>
+					<div class="header-about-lang__ru lang-ru">RU</div>
 					<div class="header-about-lang__I">|</div>
-					<div class="header-about-lang__eng selected">ENG</div>
+					<div class="header-about-lang__eng lang-eng selected">ENG</div>
 				</div>
 			</div>
-			<di	v class="header-adaptive">
+			<div class="header-adaptive">
 				<div class="header-adaptive-text">
 					<h1 class="h1 lang-key__adaptiv-h1">Denis<br>Novik</h1>
 					<div class="header-adaptive-text__item lang-key__adaptiv-header-about">UX | UI designer<br> 24 years old, Minsk</div>
 				</div>
 				<div class="header-about__hamburger"></div>
-			</di>
+			</div>
 			<img class="header-about__image" src="src/images/picture_1.png" alt="author's photo">
 			<img class="header-about__image_adaptive" src="src/images/Picture_2.png" alt="author's photo">
 		</div>
@@ -44,21 +44,21 @@
 				<div class="nav-popup-container-nav_and_cross">
 					<nav>
 						<ul class="nav-list-popup">
-							<li><a href="#hd" class="nav-list-popup__link selected lang-key__nav-popup-link_home">Home</a></li>		
-							<li><a href="#ab" class="nav-list-popup__link lang-key__nav-popup-link_about-me">About me</a></li>		
-							<li><a href="#sk" class="nav-list-popup__link lang-key__nav-popup-link_skills">Skills</a></li>		
-							<li><a href="#pr" class="nav-list-popup__link lang-key__nav-popup-link_portfolio">Portfolio</a></li>		
-							<li><a href="#cn" class="nav-list-popup__link lang-key__nav-popup-link_contacts">Contacts</a></li>		
+							<li><a href="#hd" class="nav-list-popup__link selected lang-key__nav-popup-link_home nav-link-js">Home</a></li>		
+							<li><a href="#ab" class="nav-list-popup__link lang-key__nav-popup-link_about-me nav-link-js">About me</a></li>		
+							<li><a href="#sk" class="nav-list-popup__link lang-key__nav-popup-link_skills nav-link-js">Skills</a></li>		
+							<li><a href="#pr" class="nav-list-popup__link lang-key__nav-popup-link_portfolio nav-link-js">Portfolio</a></li>		
+							<li><a href="#cn" class="nav-list-popup__link lang-key__nav-popup-link_contacts nav-link-js">Contacts</a></li>		
 						</ul>
 					</nav>
 						<div class="popup-cross-image"></div>
 				</div>
 				<div class="container-popup">
 					<div class="popup-lang-container">
-						<div class="popup-lang-container__ru">RU</div>
+						<div class="popup-lang-container__ru lang-ru">RU</div>
 						<div class="popup-lang-container__I">|</div>
-						<div class="popup-lang-container__eng selected">ENG</div>
-					</div>
+						<div class="popup-lang-container__eng selected lang-eng ">ENG</div>
+					</div> 
 				</div>
 			</div>
 		</div>
@@ -177,7 +177,15 @@
 			<p class="footer-container__item lang-key__footer-p2">Like me on <br>LinkedIn, Instagram, Behance, Dribble</p>
 		</div>
 	</footer>
-	<script src="array.js"></script>
-	<script src="index.js"></script>	
+	<script src="js/array.js"></script>
+	<script src="js/index.js"></script>	
 </body>
 </html>	
+
+	<!-- В конце верстки я уже осознал, что скорее всего popup и условно говоря блок header-about-text, нужно было 
+верстать с помощью grid'ов это было бы и порядком проще(скорее всего) и помогло бы избежать дубляжа header-about-text
+(23 строка) и header-adaptive, так как grid проще было бы адаптировать с media-запросами. Возможно и на флексах это 
+можно было бы сделать, но я почему-то решил, что слишком много гемора будет при написании медиа запросов. У некоторых
+тегов по несколько классов, но это была необходить, во первых для переключения языка с lang-key-**, во-вторых
+не хотелось плодить слишком много констант в js например для переключателей языка и ссылок навигации, а затем еще слушатели
+на них добавлять-->
