@@ -1,8 +1,10 @@
+html{
+	scroll-behavior: smooth;
+  }
 h2{
 	margin: 70px auto 30px;
 	font-size: 34px;
 	line-height: 42px;
-	
 }
 .page{
 	background-color: #FFFFFF;
